@@ -1,6 +1,25 @@
-print("Введіть ціле число n:")
-n = int(input())
+x = 0
+y = 0
 
-next_even = (n // 2 + 1) * 2
+print("Вводьте дані (наприклад 'Північ 5'), щоб завершити введіть 'Скарб!'):")
 
-print(next_even)
+while True:
+    line = input()
+    if line == "Скарб!" or line == "Treasure!":
+        break
+
+    parts = line.split()
+
+    direction = parts[0]
+    steps = int(parts[1])
+
+    if direction == "Північ" or direction == "North":
+        y += steps
+    elif direction == "Південь" or direction == "South":
+        y -= steps
+    elif direction == "Схід" or direction == "East":
+        x += steps
+    elif direction == "Захід" or direction == "West":
+        x -= steps
+
+print(x, y)
