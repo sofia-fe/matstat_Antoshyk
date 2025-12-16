@@ -14,4 +14,3 @@ desks_c = (c + 1) // 2
 total = desks_a + desks_b + desks_c
 
 print("Всього потрібно парт:", total)
-
